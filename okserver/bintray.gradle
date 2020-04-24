@@ -1,0 +1,29 @@
+apply plugin: 'com.novoda.bintray-release'
+
+version = rootProject.ext.versionName_okserver      // 数据仓库依赖第三部分
+
+tasks.withType(Javadoc) {//上传代码如果有中文注释，需要添加如下代码
+    options{
+        encoding 'UTF-8'
+        charSet 'UTF-8'
+        links 'http://docs.oracle.com/javase/7/docs/api'
+    }
+}
+
+// 生成jar包
+task releaseJar(type: Copy) {
+    from( 'build/intermediates/intermediate-jars/release')
+    into( '../jar')
+    include('classes.jar')
+    rename('classes.jar', 'okserver-' + version + '.jar')
+}
+publish {
+    userOrg = 'alvinzhu'//注册时候的用户名
+    repoName='OkGo_AndroidX'//为上传后，在bintray显示的名字。
+    artifactId = 'okserver'//发布到JCenter上的项目名字，compile引用时的第2部分项目名
+    groupId = 'com.alvin.okgo'//compile引用时的第1部分
+    publishVersion = '4.5.0'//版本号 ，compile引用时的最后部分，下次更新是只需要更改版本号即可
+    desc = 'okgo_androidx'
+    website = 'https://github.com/Alvin9234/okhttp-OkGo'//项目的GitHub网站
+    licences = ['Apache-2.0']
+}
