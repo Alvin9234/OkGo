@@ -29,7 +29,6 @@ import com.lzy.demo.base.BaseActivity;
 import com.lzy.demo.okdownload.OkDownloadFragment;
 import com.lzy.demo.okgo.OkGoFragment;
 import com.lzy.demo.okrx2.OkRx2Fragment;
-import com.lzy.demo.okrx2.OkRxFragment;
 import com.lzy.demo.okupload.OkUploadFragment;
 
 import java.util.ArrayList;
@@ -65,7 +64,6 @@ public class MainActivity extends BaseActivity {
         items.add(new Pair<String, Fragment>("OkGo", new OkGoFragment()));
         items.add(new Pair<String, Fragment>("打赏", new PayFragment()));
         items.add(new Pair<String, Fragment>("OkRx2", new OkRx2Fragment()));
-        items.add(new Pair<String, Fragment>("OkRx", new OkRxFragment()));
         items.add(new Pair<String, Fragment>("OkDownload", new OkDownloadFragment()));
         items.add(new Pair<String, Fragment>("OkUpload", new OkUploadFragment()));
 
