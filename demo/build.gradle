@@ -91,9 +91,6 @@ dependencies {
     api 'com.readystatesoftware.chuck:library:1.0.4'
 
     api project(':okgo')
-    api project(':okrx')
-    api project(':okrx2')
-    api project(':okserver')
 
     api 'com.lzy.widget:ninegridview:0.2.1'
     api 'com.lzy.widget:imagepicker:0.3.2'
