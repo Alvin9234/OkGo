@@ -7,4 +7,21 @@
 ## 原库okhttp-OkGo地址
  * [https://github.com/jeasonlzy/okhttp-OkGo](https://github.com/jeasonlzy/okhttp-OkGo) 
  
+使用方式：
+
+项目根目录gradle
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+app下的gradle
+```
+implementation 'com.github.Alvin9234:OkGo:v1.0'
+
+```
+ 
  
